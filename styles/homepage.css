@@ -1,0 +1,107 @@
+.homepage-image-container{
+    position: relative;
+    text-align: center;
+    z-index: -3;
+}
+
+.homepage-image {
+    margin-top: -60px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.homepage-image-text {
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.homepage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 370px;
+}
+
+.homepage-grid-motto {
+    position: relative;
+    text-align: center;
+}
+
+.homepage-grid-motto-image {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-grid-motto-image-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 2.1
+}
+
+.homepage-grid-about {
+    background-color: black;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-grid-about-title {
+    max-width: 742.297px;
+    width: 100%;
+}
+
+.homepage-grid-about-text {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.our-services {
+    background-color: #202020;
+}
+
+.our-services-title{
+    height: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.our-services-subsections-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+.our-services-subsections-grid-advice,
+.our-services-subsections-grid-litigation,
+.our-services-subsections-grid-courts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-services-subsections-grid-advice-title,
+.our-services-subsections-grid-litigation-title,
+.our-services-subsections-grid-courts-title {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,133 @@
+.top-navigation {
+    height: 145px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-logo {
+    flex: 41.5%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-logo::before {
+    background: white none repeat scroll 0 0;
+    content: "";
+    height: 145px;
+    position: absolute;
+    right: -25px;
+    transform: skew(-13.5deg);
+    width: 50px;
+    z-index: -1;
+}
+
+.Mortlock-logo {
+    width: 360px;
+    height: 75px;
+}
+
+.header-info {
+    flex: 58.5%;
+    background-color: #892323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info-email-logo {
+    height: 28px;
+}
+
+.header-info-schedule-logo {
+    height: 32px;
+    width: 32px;
+}
+
+.header-info-telephone-logo,
+.header-info-email-logo,
+.header-info-schedule-logo {
+    margin-right: 5px;
+}
+
+.header-info-telephone {
+    margin-left: 70px;
+}
+
+.header-info-telephone,
+.header-info-email,
+.header-info-schedule {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.header-info-telephone-link,
+.header-info-email-link,
+.header-info-schedule-link {
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.header-info-telephone-link:hover,
+.header-info-email-link:hover,
+.header-info-schedule-link:hover {
+    opacity: 70%;
+}
+
+.header-info-socials {
+    width: 110px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-navigation {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -25px;
+}
+
+.header-navigation-transparent {
+    background-color: transparent;
+    flex: 30%;
+}
+
+.header-navigation-links {
+    background-color: black;
+    flex: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.header-navigation-links::before {
+    background: black none repeat scroll 0 0;
+    content: "";
+    height: 50px;
+    position: absolute;
+    left: -15px;
+    transform: skew(-30deg);
+    width: 50px;
+    z-index: -2;
+}
+
+.header-navigation-links-text {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-top-style: solid;
+    padding-top: 3px;
+}
