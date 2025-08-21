@@ -6,24 +6,12 @@
 }
 
 .header-logo {
-    flex: 41.5%;
+    flex: 44.3%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     z-index: 1;
-}
-
-.header-logo::before {
-    background: white none repeat scroll 0 0;
-    content: "";
-    height: 145px;
-    position: absolute;
-    right: -25px;
-    transform: skew(-13.5deg);
-    width: 50px;
-    z-index: -1;
 }
 
 .Mortlock-logo {
@@ -32,11 +20,25 @@
 }
 
 .header-info {
-    flex: 58.5%;
+    flex: 55.7%;
+    padding-left: 20px;
     background-color: #892323;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.header-info::before {
+    background: #892323 none repeat scroll 0 0;
+    content: "";
+    height: 145px;
+    position: absolute;
+    left: -25px;
+    transform: skew(-13.5deg);
+    width: 50px;
+    z-index: -1;
 }
 
 .header-info-email-logo {
@@ -51,11 +53,7 @@
 .header-info-telephone-logo,
 .header-info-email-logo,
 .header-info-schedule-logo {
-    margin-right: 5px;
-}
-
-.header-info-telephone {
-    margin-left: 70px;
+    padding-right: 5px;
 }
 
 .header-info-telephone,
