@@ -7,6 +7,7 @@
 
 .header-logo {
     flex: 44.3%;
+    min-width: 420px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -17,6 +18,7 @@
 .Mortlock-logo {
     width: 360px;
     height: 75px;
+    padding-right: 25px;
 }
 
 .header-info {
@@ -24,7 +26,6 @@
     padding-left: 20px;
     background-color: #892323;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
@@ -56,6 +57,16 @@
     padding-right: 5px;
 }
 
+.header-info-telephone {
+    margin-right: auto;
+}
+
+.header-info-email,
+.header-info-schedule {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .header-info-telephone,
 .header-info-email,
 .header-info-schedule {
@@ -80,11 +91,14 @@
     opacity: 70%;
 }
 
-.header-info-socials {
-    width: 110px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: space-between;
+.header-info-socials-facebook {
+    margin-left: auto;
+}
+
+.header-info-socials-facebook,
+.header-info-socials-linkedin,
+.header-info-socials-twitter {
+    padding-right: 20px;
 }
 
 .bottom-navigation {
@@ -127,5 +141,71 @@
     font-weight: 700;
     text-decoration: none;
     border-top-style: solid;
+    border-color: transparent;
     padding-top: 3px;
+}
+
+.header-navigation-links-text:hover {
+    border-color: white;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    
+    .header-info {
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .header-info-telephone,
+    .header-info-email,
+    .header-info-schedule,
+    .header-info-socials-facebook,
+    .header-info-socials-linkedin,
+    .header-info-socials-twitter {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-info-telephone-logo,
+    .header-info-email-logo,
+    .header-info-schedule-logo {
+        padding: 0;
+    }
+
+    .header-info-telephone-text,
+    .header-info-email-text,
+    .header-info-schedule-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    
+    .header-info {
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .header-info-telephone,
+    .header-info-email,
+    .header-info-schedule,
+    .header-info-socials-facebook,
+    .header-info-socials-linkedin,
+    .header-info-socials-twitter {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-info-telephone-logo,
+    .header-info-email-logo,
+    .header-info-schedule-logo {
+        padding: 0;
+    }
+
+    .header-info-telephone-text,
+    .header-info-email-text,
+    .header-info-schedule-text {
+        display: none;
+    }
 }
