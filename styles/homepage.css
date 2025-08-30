@@ -2,12 +2,16 @@
     position: relative;
     text-align: center;
     z-index: -3;
+    margin-bottom: -30px;
 }
 
 .homepage-image {
-    margin-top: -60px;
+    margin-top: -25px;
     width: 100%;
-    object-fit: contain;
+    max-height: 868px;
+    object-fit: cover;
+    object-position: 0px -30px;
+    overflow: hidden;
     display: block;
 }
 
@@ -17,8 +21,9 @@
     bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 55px;
+    font-size: max(24px, 3.2vw);
     font-weight: 700;
+    padding-bottom: 10px;
 }
 
 .homepage-grid {
@@ -58,17 +63,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .homepage-grid-about-title {
-    max-width: 742.297px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .homepage-grid-about-text {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 2px;
     line-height: 1.8;
@@ -107,3 +114,45 @@
     text-align: center;
 }
 
+.our-services-subsections-grid-advice-text,
+.our-services-subsections-grid-litigation-text,
+.our-services-subsections-grid-courts-text {
+    padding-left: 40px;
+    padding-right: 10px;
+    max-width: 330px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .homepage-grid-about {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .homepage-image {
+        height: 400px;
+        object-position: center center;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+
+    .homepage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .our-services-subsections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .our-services-subsections-grid-advice,
+    .our-services-subsections-grid-litigation,
+    .our-services-subsections-grid-courts {
+        padding-top: 20px;
+    }
+}

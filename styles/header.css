@@ -7,7 +7,8 @@
 
 .header-logo {
     flex: 44.3%;
-    min-width: 420px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -16,8 +17,9 @@
 }
 
 .Mortlock-logo {
-    width: 360px;
-    height: 75px;
+    width: 100%;
+    max-width: 360px;
+    max-height: 75px;
     padding-right: 25px;
 }
 
@@ -102,7 +104,7 @@
 }
 
 .bottom-navigation {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,37 +147,101 @@
     padding-top: 3px;
 }
 
-.header-navigation-links-text:hover {
+.header-navigation-links-text:hover,
+.header-navigation-links-text-active:hover {
     border-color: white;
 }
 
+.header-navigation-links-arrow {
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: none;
+}
 
-@media only screen and (max-width: 1400px) {
-    
+.header-navigation-links-arrow-container {
+    display: none;
+}
+
+.header-navigation-links-arrow-active {
+    background-color: black;
+    flex: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.header-navigation-links-text-active {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-top-style: solid;
+    border-color: transparent;
+    padding-top: 3px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header-navigation-links-text {
+        display: none;
+    }
+
+    .header-navigation-links-arrow {
+        display: inline-block;
+    }
+
+    .header-navigation-links-arrow-container {
+        width: 80px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .top-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .header-info {
-        justify-content: space-evenly;
-        padding: 0;
+        max-height: 50px;
+    }
+    
+    .header-info::before, 
+    .header-navigation-transparent,
+    .header-navigation-links::before {
+        display: none;
     }
 
-    .header-info-telephone,
-    .header-info-email,
-    .header-info-schedule,
-    .header-info-socials-facebook,
-    .header-info-socials-linkedin,
-    .header-info-socials-twitter {
-        margin: 0;
-        padding: 0;
-    }
-
-    .header-info-telephone-logo,
-    .header-info-email-logo,
-    .header-info-schedule-logo {
-        padding: 0;
+    .Mortlock-logo {
+        padding: 10px;
     }
 
     .header-info-telephone-text,
-    .header-info-email-text,
-    .header-info-schedule-text {
+    .header-info-email-text {
+        margin-left: 5px;
+    }
+
+    .bottom-navigation {
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1400px) {
+
+    .header-info-telephone-text,
+    .header-info-email-text {
         display: none;
     }
 }
@@ -203,8 +269,6 @@
         padding: 0;
     }
 
-    .header-info-telephone-text,
-    .header-info-email-text,
     .header-info-schedule-text {
         display: none;
     }

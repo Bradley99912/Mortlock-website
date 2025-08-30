@@ -61,6 +61,7 @@
             <nav class="bottom-navigation">
                 <div class="header-navigation-transparent"></div>
                 <div class="header-navigation-links">
+                    <p class="header-navigation-links-arrow-container"><i class="header-navigation-links-arrow"></i></p>
                     <a class="header-navigation-links-text" href="https://www.mortlockryanco.com.au/">HOME</a>
                     <a class="header-navigation-links-text" href="https://www.mortlockryanco.com.au/about-us/">ABOUT US</a>
                     <a class="header-navigation-links-text" href="">OUR SERVICES</a>
@@ -85,7 +86,6 @@
                         <img class="homepage-grid-motto-image" src="images/Ryan.jpg">
                         <p class="homepage-grid-motto-image-text">
                             We at Mortlock Ryan & Co provide you a quality legal service and want to
-                            <br>
                             make sure you can have your say and tell your part of the story.
                         </p>
                     </div>
@@ -94,16 +94,12 @@
                             About Us
                         </h2>
                         <p class="homepage-grid-about-text">
-                            <br>
                             Mortlock Ryan & Co Barristers and Solicitors are based in Northam Western Australia.
-                            <br>
                             Our dedicated team provides a timely, professional and personal service for our clients.
                             <br>
                             <br>
                             Michael Ryan is our firm’s principal. Michael is primarily a criminal law practitioner who also
-                            <br>
                             practices in the areas of Wills and Probate and family mediation. Michael is the firm’s
-                            <br>
                             registered Family Dispute Resolution Practitioner.
                         </p>
                     </div>
@@ -135,7 +131,7 @@
                         <h3 class="our-services-subsections-grid-litigation-title">
                             Litigation Practise Areas
                         </h3>
-                        <ul class="our-services-subsections-grid-litigation-advice-text">
+                        <ul class="our-services-subsections-grid-litigation-text">
                             <li>Criminal</li>
                             <li>Appeals</li>
                             <li>Misconduct and Violence Restraining Orders</li>
@@ -166,5 +162,24 @@
                 
             </footer>
         </main>
+
+        <script>
+            
+        let downArrow = document.querySelector('.header-navigation-links-arrow-container');
+        let navLinks = document.querySelectorAll('.header-navigation-links-text');
+
+        downArrow.addEventListener("click", function() {
+
+            this.parentElement.classList.toggle('header-navigation-links-arrow-active');
+            this.parentElement.classList.toggle('header-navigation-links');
+            
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.toggle('header-navigation-links-text');
+                navLinks[i].classList.toggle('header-navigation-links-text-active');
+            }
+        });
+            
+        </script>
+
     </body>
 </html>
