@@ -13,6 +13,7 @@
     object-position: 0px -30px;
     overflow: hidden;
     display: block;
+    object-position: center center;
 }
 
 .homepage-image-text {
@@ -136,7 +137,6 @@
 
     .homepage-image {
         height: 400px;
-        object-position: center center;
     }
 }
 
